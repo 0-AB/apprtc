@@ -65,7 +65,7 @@ RUN echo -e  "/usr/bin/stunnel &\n" >> /go/start.sh \
     && echo -e "wait -n\n" >> /go/start.sh \
     && echo -e "exit $?\n" >> /go/start.sh \
     && chmod +x /go/start.sh
-
+EXPOSE 8000
 # Start the bash wrapper that keeps both collider and the AppRTC GAE app running. 
 CMD /go/start.sh
 
